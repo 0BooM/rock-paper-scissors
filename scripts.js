@@ -2,8 +2,6 @@ let computerSelection;
 
 function getComputerSelection(){
     let randomNumber = Math.floor((Math.random() * 3) + 1);
-    console.log(randomNumber);
-
     switch(randomNumber){
         case 1:
             computerSelection = "rock"
@@ -13,20 +11,30 @@ function getComputerSelection(){
             break;
         case 3:
             computerSelection = "scissors";
-            break;
     };
-    console.log(computerSelection);
+    return computerSelection;
 }
 getComputerSelection();
+console.log(computerSelection);
+let playerSelection = prompt("What do you pick?", "rock | paper | scissors").toLowerCase();
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = prompt("What do you pick?", "rock | paper | scissors").toLowerCase();
-    console.log(playerSelection);
+   console.log(computerSelection)
 
-    switch(playerSelection, computerSelection){
-        case playerSelection === "rock" && computerSelection === "paper":
-            console.log("You lose! Paper beats Rock");
+    if(playerSelection === "paper" && computerSelection === "rock"
+    || playerSelection === "scissors" && computerSelection === "paper" 
+    || playerSelection === "rock" && computerSelection === "scissors"){
+        console.log(`You win! ${playerSelection} beats ${computerSelection}.`);
+    }
+
+    else if(playerSelection === "rock" && computerSelection ==="paper" 
+    || playerSelection === "scissors" && computerSelection === "rock"
+    || playerSelection === "paper" && computerSelection === "scissors"){
+        console.log(`You lose ${computerSelection} beats ${playerSelection}.`);
+    }
+
+    else{
+        console.log(`It's a tie!`);
     }
 };
-
-playRound();
+playRound(playerSelection, computerSelection);
