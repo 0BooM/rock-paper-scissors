@@ -15,11 +15,6 @@ function getComputerSelection(){
     return computerSelection;
 }
 
-getComputerSelection();
-console.log(`Computer chose: ${computerSelection}`);
-
-let playerSelection = prompt("What do you pick?", "rock | paper | scissors").toLowerCase();
-console.log(`Player chose: ${playerSelection}`)
 function playRound(playerSelection, computerSelection){
 
     if(playerSelection === "paper" && computerSelection === "rock"
@@ -38,5 +33,11 @@ function playRound(playerSelection, computerSelection){
         console.log(`It's a tie!`);
     }
 };
+
+getComputerSelection();
+console.log(`Computer chose: ${computerSelection}`);
+
+let playerSelection = prompt("What do you pick?", "rock | paper | scissors").toLowerCase();
+console.log(`Player chose: ${playerSelection}`)
 
 playRound(playerSelection, computerSelection);
