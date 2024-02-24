@@ -39,25 +39,25 @@ function playRound(playerSelection, computerSelection){
     }
 };
 
-function game(){
-  for(let i = 0; i < 5; i++){
-    getComputerChoice();
-    console.log(computerSelection);
-    getPlayerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-  }
+// function game(){
+//   for(let i = 0; i < 5; i++){
+//     getComputerChoice();
+//     console.log(computerSelection);
+//     getPlayerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
+//   }
 
-  console.log(`Player score is: ${playerScore} \nComputer score is: ${computerScore}`)
+//   console.log(`Player score is: ${playerScore} \nComputer score is: ${computerScore}`)
 
-  if(playerScore > computerScore){
-    console.log(`Player wins!`);
-  }
-  else if(playerScore < computerScore){
-    console.log(`Computer wins!`);
-  }
-  else{
-    console.log(`It's a tie! Do you want to try again?`);
-  }
-}
+//   if(playerScore > computerScore){
+//     console.log(`Player wins!`);
+//   }
+//   else if(playerScore < computerScore){
+//     console.log(`Computer wins!`);
+//   }
+//   else{
+//     console.log(`It's a tie! Do you want to try again?`);
+//   }
+// }
 
-game();
+// game();
